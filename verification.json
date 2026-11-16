@@ -1,0 +1,444 @@
+{
+    "practice":  7,
+    "variant":  10,
+    "repository":  "https://github.com/rensxm/cloud-practice-7-variant10",
+    "serviceUrl":  "https://cloud-practice-7-variant10.onrender.com",
+    "local":  {
+                  "base":  "http://localhost:3003",
+                  "phase":  "good",
+                  "checkedAt":  "2026-11-16T01:57:07.689117+00:00",
+                  "checks":  [
+                                 {
+                                     "method":  "GET",
+                                     "path":  "/api/files",
+                                     "expected":  200,
+                                     "status":  200,
+                                     "body":  [
+                                                  {
+                                                      "id":  1,
+                                                      "name":  "дәріс.pdf",
+                                                      "content_type":  "application/pdf",
+                                                      "size_bytes":  245760
+                                                  },
+                                                  {
+                                                      "id":  2,
+                                                      "name":  "таныстырылым.pptx",
+                                                      "content_type":  "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                                      "size_bytes":  1048576
+                                                  },
+                                                  {
+                                                      "id":  3,
+                                                      "name":  "конспект.txt",
+                                                      "content_type":  "text/plain",
+                                                      "size_bytes":  4096
+                                                  },
+                                                  {
+                                                      "id":  10,
+                                                      "name":  "зертхана.txt",
+                                                      "content_type":  "text/plain",
+                                                      "size_bytes":  2048
+                                                  }
+                                              ]
+                                 },
+                                 {
+                                     "method":  "GET",
+                                     "path":  "/api/files/1",
+                                     "expected":  200,
+                                     "status":  200,
+                                     "body":  {
+                                                  "id":  1,
+                                                  "name":  "дәріс.pdf",
+                                                  "content_type":  "application/pdf",
+                                                  "size_bytes":  245760
+                                              }
+                                 },
+                                 {
+                                     "method":  "GET",
+                                     "path":  "/api/files/2147483647",
+                                     "expected":  404,
+                                     "status":  404,
+                                     "body":  {
+                                                  "error":  "Файл табылмады"
+                                              }
+                                 },
+                                 {
+                                     "method":  "POST",
+                                     "path":  "/api/files",
+                                     "expected":  400,
+                                     "status":  400,
+                                     "body":  {
+                                                  "error":  "name, content_type және теріс емес бүтін size_bytes қажет"
+                                              }
+                                 },
+                                 {
+                                     "method":  "POST",
+                                     "path":  "/api/files",
+                                     "expected":  400,
+                                     "status":  400,
+                                     "body":  {
+                                                  "error":  "name, content_type және теріс емес бүтін size_bytes қажет"
+                                              }
+                                 },
+                                 {
+                                     "method":  "POST",
+                                     "path":  "/api/files",
+                                     "expected":  400,
+                                     "status":  400,
+                                     "body":  {
+                                                  "error":  "name, content_type және теріс емес бүтін size_bytes қажет"
+                                              }
+                                 },
+                                 {
+                                     "method":  "POST",
+                                     "path":  "/api/files",
+                                     "expected":  400,
+                                     "status":  400,
+                                     "body":  {
+                                                  "error":  "JSON пішімі қате"
+                                              }
+                                 },
+                                 {
+                                     "method":  "POST",
+                                     "path":  "/api/files",
+                                     "expected":  201,
+                                     "status":  201,
+                                     "body":  {
+                                                  "id":  14,
+                                                  "name":  "жергілікті-7.txt",
+                                                  "content_type":  "text/plain",
+                                                  "size_bytes":  1024
+                                              }
+                                 },
+                                 {
+                                     "method":  "GET",
+                                     "path":  "/health",
+                                     "expected":  200,
+                                     "status":  200,
+                                     "body":  {
+                                                  "status":  "ok",
+                                                  "time":  "2026-11-16T01:57:30.373Z"
+                                              }
+                                 },
+                                 {
+                                     "method":  "GET",
+                                     "path":  "/health/db",
+                                     "expected":  200,
+                                     "status":  200,
+                                     "body":  {
+                                                  "status":  "ok",
+                                                  "database":  "connected"
+                                              }
+                                 }
+                             ],
+                  "created":  {
+                                  "id":  14,
+                                  "name":  "жергілікті-7.txt",
+                                  "content_type":  "text/plain",
+                                  "size_bytes":  1024
+                              }
+              },
+    "cloudGood":  {
+                      "base":  "https://cloud-practice-7-variant10.onrender.com",
+                      "phase":  "good",
+                      "checkedAt":  "2026-11-16T02:02:57.727386+00:00",
+                      "checks":  [
+                                     {
+                                         "method":  "GET",
+                                         "path":  "/api/files",
+                                         "expected":  200,
+                                         "status":  200,
+                                         "body":  [
+                                                      {
+                                                          "id":  1,
+                                                          "name":  "дәріс.pdf",
+                                                          "content_type":  "application/pdf",
+                                                          "size_bytes":  245760
+                                                      },
+                                                      {
+                                                          "id":  2,
+                                                          "name":  "таныстырылым.pptx",
+                                                          "content_type":  "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                                          "size_bytes":  1048576
+                                                      },
+                                                      {
+                                                          "id":  3,
+                                                          "name":  "конспект.txt",
+                                                          "content_type":  "text/plain",
+                                                          "size_bytes":  4096
+                                                      },
+                                                      {
+                                                          "id":  10,
+                                                          "name":  "зертхана.txt",
+                                                          "content_type":  "text/plain",
+                                                          "size_bytes":  2048
+                                                      },
+                                                      {
+                                                          "id":  14,
+                                                          "name":  "жергілікті-7.txt",
+                                                          "content_type":  "text/plain",
+                                                          "size_bytes":  1024
+                                                      }
+                                                  ]
+                                     },
+                                     {
+                                         "method":  "GET",
+                                         "path":  "/api/files/1",
+                                         "expected":  200,
+                                         "status":  200,
+                                         "body":  {
+                                                      "id":  1,
+                                                      "name":  "дәріс.pdf",
+                                                      "content_type":  "application/pdf",
+                                                      "size_bytes":  245760
+                                                  }
+                                     },
+                                     {
+                                         "method":  "GET",
+                                         "path":  "/api/files/2147483647",
+                                         "expected":  404,
+                                         "status":  404,
+                                         "body":  {
+                                                      "error":  "Файл табылмады"
+                                                  }
+                                     },
+                                     {
+                                         "method":  "POST",
+                                         "path":  "/api/files",
+                                         "expected":  400,
+                                         "status":  400,
+                                         "body":  {
+                                                      "error":  "name, content_type және теріс емес бүтін size_bytes қажет"
+                                                  }
+                                     },
+                                     {
+                                         "method":  "POST",
+                                         "path":  "/api/files",
+                                         "expected":  400,
+                                         "status":  400,
+                                         "body":  {
+                                                      "error":  "name, content_type және теріс емес бүтін size_bytes қажет"
+                                                  }
+                                     },
+                                     {
+                                         "method":  "POST",
+                                         "path":  "/api/files",
+                                         "expected":  400,
+                                         "status":  400,
+                                         "body":  {
+                                                      "error":  "name, content_type және теріс емес бүтін size_bytes қажет"
+                                                  }
+                                     },
+                                     {
+                                         "method":  "POST",
+                                         "path":  "/api/files",
+                                         "expected":  400,
+                                         "status":  400,
+                                         "body":  {
+                                                      "error":  "JSON пішімі қате"
+                                                  }
+                                     },
+                                     {
+                                         "method":  "POST",
+                                         "path":  "/api/files",
+                                         "expected":  201,
+                                         "status":  201,
+                                         "body":  {
+                                                      "id":  15,
+                                                      "name":  "қауіпсіздік-7.txt",
+                                                      "content_type":  "text/plain",
+                                                      "size_bytes":  1024
+                                                  }
+                                     },
+                                     {
+                                         "method":  "GET",
+                                         "path":  "/health",
+                                         "expected":  200,
+                                         "status":  200,
+                                         "body":  {
+                                                      "status":  "ok",
+                                                      "time":  "2026-11-16T02:03:06.019Z"
+                                                  }
+                                     },
+                                     {
+                                         "method":  "GET",
+                                         "path":  "/health/db",
+                                         "expected":  200,
+                                         "status":  200,
+                                         "body":  {
+                                                      "status":  "ok",
+                                                      "database":  "connected"
+                                                  }
+                                     }
+                                 ],
+                      "created":  {
+                                      "id":  15,
+                                      "name":  "қауіпсіздік-7.txt",
+                                      "content_type":  "text/plain",
+                                      "size_bytes":  1024
+                                  }
+                  },
+    "cloudFault":  {
+                       "base":  "https://cloud-practice-7-variant10.onrender.com",
+                       "phase":  "bad",
+                       "checkedAt":  "2026-11-16T02:06:24.456172+00:00",
+                       "checks":  [
+                                      {
+                                          "method":  "GET",
+                                          "path":  "/health",
+                                          "expected":  200,
+                                          "status":  200,
+                                          "body":  {
+                                                       "status":  "ok",
+                                                       "time":  "2026-11-16T02:06:29.723Z"
+                                                   }
+                                      },
+                                      {
+                                          "method":  "GET",
+                                          "path":  "/health/db",
+                                          "expected":  503,
+                                          "status":  503,
+                                          "body":  {
+                                                       "status":  "degraded",
+                                                       "database":  "unavailable"
+                                                   }
+                                      },
+                                      {
+                                          "method":  "GET",
+                                          "path":  "/api/files",
+                                          "expected":  500,
+                                          "status":  500,
+                                          "body":  {
+                                                       "error":  "Серверде қате пайда болды"
+                                                   }
+                                      }
+                                  ]
+                   },
+    "cloudRestored":  {
+                          "base":  "https://cloud-practice-7-variant10.onrender.com",
+                          "phase":  "restored",
+                          "checkedAt":  "2026-11-16T02:09:02.684781+00:00",
+                          "checks":  [
+                                         {
+                                             "method":  "GET",
+                                             "path":  "/health",
+                                             "expected":  200,
+                                             "status":  200,
+                                             "body":  {
+                                                          "status":  "ok",
+                                                          "time":  "2026-11-16T02:09:07.639Z"
+                                                      }
+                                         },
+                                         {
+                                             "method":  "GET",
+                                             "path":  "/health/db",
+                                             "expected":  200,
+                                             "status":  200,
+                                             "body":  {
+                                                          "status":  "ok",
+                                                          "database":  "connected"
+                                                      }
+                                         },
+                                         {
+                                             "method":  "GET",
+                                             "path":  "/api/files",
+                                             "expected":  200,
+                                             "status":  200,
+                                             "body":  [
+                                                          {
+                                                              "id":  1,
+                                                              "name":  "дәріс.pdf",
+                                                              "content_type":  "application/pdf",
+                                                              "size_bytes":  245760
+                                                          },
+                                                          {
+                                                              "id":  2,
+                                                              "name":  "таныстырылым.pptx",
+                                                              "content_type":  "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                                              "size_bytes":  1048576
+                                                          },
+                                                          {
+                                                              "id":  3,
+                                                              "name":  "конспект.txt",
+                                                              "content_type":  "text/plain",
+                                                              "size_bytes":  4096
+                                                          },
+                                                          {
+                                                              "id":  10,
+                                                              "name":  "зертхана.txt",
+                                                              "content_type":  "text/plain",
+                                                              "size_bytes":  2048
+                                                          },
+                                                          {
+                                                              "id":  14,
+                                                              "name":  "жергілікті-7.txt",
+                                                              "content_type":  "text/plain",
+                                                              "size_bytes":  1024
+                                                          },
+                                                          {
+                                                              "id":  15,
+                                                              "name":  "қауіпсіздік-7.txt",
+                                                              "content_type":  "text/plain",
+                                                              "size_bytes":  1024
+                                                          },
+                                                          {
+                                                              "id":  16,
+                                                              "name":  "қорғау-7.txt",
+                                                              "content_type":  "text/plain",
+                                                              "size_bytes":  2048
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "method":  "GET",
+                                             "path":  "/api/files/15",
+                                             "expected":  200,
+                                             "status":  200,
+                                             "body":  {
+                                                          "id":  15,
+                                                          "name":  "қауіпсіздік-7.txt",
+                                                          "content_type":  "text/plain",
+                                                          "size_bytes":  1024
+                                                      }
+                                         }
+                                     ],
+                          "persisted":  true,
+                          "finalCount":  7
+                      },
+    "securityAudit":  {
+                          "checkedAt":  "2026-11-16T02:08:42.598Z",
+                          "commit":  "97fdbf7934ff1c6216760841f7418b4fe46c494c",
+                          "trackedFiles":  [
+                                               ".env.example",
+                                               ".gitignore",
+                                               "README.md",
+                                               "db.js",
+                                               "demo.html",
+                                               "init-db.js",
+                                               "package-lock.json",
+                                               "package.json",
+                                               "requests.http",
+                                               "schema.sql",
+                                               "server.js",
+                                               "verification.json"
+                                           ],
+                          "envTracked":  false,
+                          "credentialFindings":  [
+
+                                                 ],
+                          "localEnvExists":  true,
+                          "gitignore":  "node_modules/\n.env\n.env.*\n!.env.example\n*.log\n",
+                          "scope":  "Current public repository files; credential URL and private-key pattern scan."
+                      },
+    "uiPost":  {
+                   "status":  201,
+                   "size_bytes":  2048,
+                   "content_type":  "text/plain",
+                   "name":  "қорғау-7.txt",
+                   "id":  16
+               },
+    "deployments":  {
+                        "fault":  "dep-dbt6a0hsrm7s73abn7hg",
+                        "restored":  "dep-dbt6b256e07s73bicubg",
+                        "good":  "dep-dbt689e1egvs73fhp0s0"
+                    }
+}
